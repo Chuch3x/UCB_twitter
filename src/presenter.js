@@ -21,6 +21,7 @@ form.addEventListener("submit", (event) => {
   <div class="card-body">
     <p>${post.titulo}  </p>
     <p>${post.detalle}  </p>
+    <p> Fecha de publicacion: ${post.fecha.getDate()}  / ${post.fecha.getMonth()} / ${post.fecha.getFullYear()}  </p>
     </div>
   </div>`;
 });
