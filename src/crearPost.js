@@ -1,3 +1,5 @@
+import longTextAreaTitulo from "./maxlenght";
+
 function crearPost(titulo, detalle){
   return{
     titulo: titulo,

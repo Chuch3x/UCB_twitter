@@ -1,5 +1,6 @@
 import crearPost from "./crearPost";
 
+
 let posts = [];
 window.onload = function () {
   window.posts = [];
@@ -12,7 +13,8 @@ const div = document.querySelector("#mostrar_posts_div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  if(titulo.value == "" && detalle.value == "")
+
+  if(titulo.value == "")
   {
     return alert("Los campos no pueden estar vacios");
   }
@@ -23,7 +25,7 @@ form.addEventListener("submit", (event) => {
   
     div.innerHTML += `<div class="card">
     <div class="card-body">
-      <p>${post.titulo}  </p>
+      <h3>${post.titulo}  </h3>
       <p>${post.detalle}  </p>
       <p> Fecha de publicacion: ${post.fecha.getDate()}  / ${post.fecha.getMonth()} / ${post.fecha.getFullYear()}  </p>
       </div>
