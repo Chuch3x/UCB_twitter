@@ -1,6 +1,7 @@
-function crearPost(detalle){
+function crearPost(titulo, detalle){
   return{
-      detalle: detalle, 
+    titulo: titulo,
+    detalle: detalle, 
   };
 }
 
