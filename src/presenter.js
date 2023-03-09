@@ -16,7 +16,7 @@ form.addEventListener("submit", (event) => {
 
   if(titulo.value == "")
   {
-    return alert("Los campos no pueden estar vacios");
+    return alert("El titulo no puede estar vacio");
   }
   else{
     const post = crearPost(titulo.value, detalle.value);
