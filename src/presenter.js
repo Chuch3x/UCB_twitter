@@ -12,16 +12,23 @@ const div = document.querySelector("#mostrar_posts_div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const post = crearPost(titulo.value, detalle.value);
-  event.preventDefault();
-  posts.push(post);
+  if(titulo.value == "" && detalle.value == "")
+  {
+    return alert("Los campos no pueden estar vacios");
+  }
+  else{
+    const post = crearPost(titulo.value, detalle.value);
+    event.preventDefault();
+    posts.push(post);
   
-  div.innerHTML += `<div class="card">
-  <div class="card-body">
-    <p>${post.titulo}  </p>
-    <p>${post.detalle}  </p>
-    <p> Fecha de publicacion: ${post.fecha.getDate()}  / ${post.fecha.getMonth()} / ${post.fecha.getFullYear()}  </p>
-    </div>
-  </div>`;
+    div.innerHTML += `<div class="card">
+    <div class="card-body">
+      <p>${post.titulo}  </p>
+      <p>${post.detalle}  </p>
+      <p> Fecha de publicacion: ${post.fecha.getDate()}  / ${post.fecha.getMonth()} / ${post.fecha.getFullYear()}  </p>
+      </div>
+    </div>`;
+  }
+
+  document.getElementById('post_form').reset();
 });
